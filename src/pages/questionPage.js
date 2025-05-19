@@ -1,13 +1,13 @@
 import React from "react";
 
-const TitlePage = () => {
+const QuestionPage = () => {
     return (
         <div>
             <h1>
-                This is going to be my personality quiz app :3
+                Prepare to be quizzed!
             </h1>
         </div>
     );
 };
 
-export default TitlePage;
+export default QuestionPage;

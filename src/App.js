@@ -1,15 +1,39 @@
-import React from "react";
+import React from 'react';
+import { 
+  BrowserRouter as Router,
+  Route 
+} from 'react-router-dom';
+import { Routes } from "react-router"
 
-import { Main } from "./pages/Main"
+import TitlePage from "./pages/titlePage";
+import ResultPage from "./pages/resultsPage";
+import QuestionPage from "./pages/questionPage";
 
 export default function App() {
-
+  
   return (
     <>
-      <div className="App">
-        <div>hi helloooo</div>
-        {/* <Main/> */}
-      </div>
-    </>
+      <Router>
+        <Routes>
+          <Route exact path="/" element={<TitlePage />} />
+          <Route path="/question" element={<QuestionPage />} />
+          <Route path="/results" element={<ResultPage />} />
+        </Routes>
+      </Router> 
+      {/* <button 
+        onClick={() => {
+          window.location.href = "/results";
+        }}
+      >
+        Go to Results Page
+      </button>
+      <button 
+        onClick={() => {
+          window.location.href = "/";
+        }}
+      >
+        Go to Title Page
+      </button> */}
+    </>  
   );
 }
